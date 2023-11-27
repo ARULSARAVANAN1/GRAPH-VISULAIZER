@@ -1,0 +1,62 @@
+<mat-toolbar color="primary" class="navbar">
+    
+    <span class="brand" routerLink="/user/home">
+        <lord-icon class="lord-icon-brand"
+            src="https://cdn.lordicon.com/qwjfapmb.json"
+            trigger="hover">
+        </lord-icon>Book Store
+    </span> 
+
+        <div class="container-input" *ngIf="searchDisable">
+            <input matInput type="text" placeholder="Search books" name="text" class="input"  [(ngModel)] = "value"  (ngModelChange)="valuefromOption()" [matAutocomplete]="options">
+            <!-- <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div> -->
+            <div class="icon">
+                <lord-icon class="lord-icon"
+                    src="https://cdn.lordicon.com/fkdzyfle.json"
+                    trigger="hover"
+                    (click)="valuefromSearch()">
+                </lord-icon>
+            </div>
+            <mat-autocomplete #options (optionSelected)="selectedBook($event)">
+                <mat-option *ngFor="let book of filteredBooks" [value]="book.title">{{book.title}}</mat-option>
+            </mat-autocomplete>
+        </div>
+         
+    <div class="tags">
+        <button mat-button routerLink="/user/home" class="tag_buttons">
+            <lord-icon class="lord-icon"
+                src="https://cdn.lordicon.com/cnpvyndp.json"
+                trigger="hover"
+                colors="primary:#d4d1fa">
+            </lord-icon> Home</button>
+        <button mat-button routerLink="/user/books">
+            <lord-icon class="lord-icon"
+                src="https://cdn.lordicon.com/zyzoecaw.json"
+                trigger="hover"
+                colors="primary:#d4d1fa">
+            </lord-icon> Books</button>
+        <!-- <button mat-button routerLink="/user/cart"><mat-icon matBadge="{{cartItems}}" matBadgePosition="above after" matBadgeSize="small" [matBadgeHidden]= "cartItems == 0">shopping_cart</mat-icon> Cart</button>     -->
+        <button mat-button routerLink="/user/cart">
+            <lord-icon matBadge="{{cartItems}}" matBadgePosition="above before" matBadgeSize="small" [matBadgeHidden]= "cartItems == 0"
+                src="https://cdn.lordicon.com/mfmkufkr.json"
+                trigger="hover"
+                colors="primary:#d4d1fa"
+                class="lord-icon">
+            </lord-icon> Cart</button>
+        
+        <button mat-button [matMenuTriggerFor]="dropdown">
+            <!-- <mat-icon>manage_accounts</mat-icon>{{user.firstName}} -->
+            <lord-icon class="lord-icon"
+                src="https://cdn.lordicon.com/kthelypq.json"
+                trigger="hover"
+                colors="primary:#d4d1fa">
+            </lord-icon> {{user.firstName}}
+        </button>
+        
+        <mat-menu #dropdown="matMenu" class="menu-primary">
+            <button mat-menu-item routerLink="profile" class="menubutton"><i class="fa-solid fa-user"></i>&nbsp; Profile</button>
+            <button mat-menu-item (click)="logout()"  class="menubutton"><i class="fa-solid fa-right-from-bracket">&nbsp; </i> Logout</button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
+

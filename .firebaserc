@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-register-1948f": {
+      "hosting": {
+        "project": [
+          "login-register-1948f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-register-1948f"
+  }
+}

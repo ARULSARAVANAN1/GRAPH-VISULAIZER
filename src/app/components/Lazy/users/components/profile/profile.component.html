@@ -1,0 +1,63 @@
+<div class="profile">
+<div>
+    <form  [formGroup]="profileForm">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title class="title">USER PROFILE</mat-card-title>
+        </mat-card-header>
+
+        <div class="edit_section">
+            <button (click)="enableControl()" class="edit_button">EDIT <i class="fa-solid fa-gear"></i></button>
+        </div>
+
+        <mat-card-content class="form-group">
+
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input matInput type="text" id="firstName" formControlName = "firstName">
+                <mat-error *ngIf="profileForm.get('firstName')?.errors?.['required'] && profileForm.get('firstName')?.touched">Enter First Name</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field class="form-field2">
+                <mat-label>Last Name</mat-label>
+                <input matInput type="text" id="lastName" formControlName = "lastName">
+                <mat-error *ngIf="profileForm.get('lastName')?.errors?.['required'] && profileForm.get('lastName')?.touched">Enter Last Name</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>Email</mat-label >
+                <input matInput type="email" id="email" formControlName = "email">
+                <mat-error *ngIf="profileForm.get('email')?.errors?.['required'] && profileForm.get('email')?.touched">Enter Email</mat-error>
+                <mat-error *ngIf="profileForm.get('email')?.errors?.['email'] && profileForm.get('email')?.touched">Enter valid Email</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field2">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput type="text" id="mobile" formControlName = "mobile">
+                <mat-error *ngIf="profileForm.get('mobile')?.errors?.['required'] && profileForm.get('mobile')?.touched">Enter mobile number</mat-error>
+                <mat-error *ngIf="profileForm.get('mobile')?.errors?.['invalidMobileNumber'] && profileForm.get('mobile')?.touched">Enter valid Mobile Number</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" id="username" formControlName = "username">
+                <mat-error *ngIf="profileForm.get('username')?.errors?.['required'] && profileForm.get('username')?.touched">Enter username</mat-error>
+                <mat-error *ngIf="profileForm.get('username')?.errors?.['invalidUsername'] && profileForm.get('username')?.touched">Enter Valid username</mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="form-field2">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" id="dob" formControlName = "dob" >
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="profileForm.get('dob')?.errors?.['required'] && profileForm.get('dob')?.touched">Enter date</mat-error>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-raised-button color="primary" class="edit_button" (click)="updateDetails()" [disabled] = "!profileForm.dirty" >UPDATE <i class="fa-solid fa-pen"></i></button>
+        </mat-card-footer>
+    </mat-card>
+</form>
+</div>
+</div>

@@ -1,0 +1,244 @@
+/* .cart_page
+{
+    margin: 0;
+    padding: 0;
+} */
+
+.cart
+{  
+    width: 60%;
+    padding-top: 100px;
+    margin-left: 350px;
+    
+}
+
+.cart-card
+{
+    padding: 20px;
+}
+
+.card-header
+{
+    padding: 0 15px;
+}
+
+.card-header h2
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    font-weight: 500;
+}
+
+
+.header_items
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    display:inline-block;
+    position:relative;
+    float:right
+}
+
+.book_cell
+{
+    /* background-color: red; */
+    padding: 10px;
+    display: flex;
+    column-gap: 10px;
+    margin-left: 80px;
+}
+
+.book_cell .title {
+    margin-top: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.book_cell .author {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: gray;
+    font-size: 12px;
+}
+
+.image
+{
+    width: 80px;
+    height: 110px;
+    border-radius: 4px;
+}
+
+.total-price {
+    display: inline-block;
+    position:relative;
+    float:right;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.link_remove
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: 10px;
+    cursor: pointer;
+    /* background-color: aquamarine; */
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.mat-mdc-header-cell{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.mat-mdc-cell{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.mat-mdc-card-footer{
+    font-family: 'Trebuchet MS';
+    border-top: 0.5px solid rgb(234, 229, 229);
+}
+
+.footers
+{
+    /* background-color: red; */
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.checkout
+{
+    margin-top: 2%;
+    width: 96%;
+    text-align: end;
+    
+}
+
+.checkout-btn
+{
+    height: 30px;
+    padding: 0px 12px;
+    border: 1px solid #fff;
+    background-color: black;
+    color: white;
+    transition: all .4s;
+    font-size: 15px;
+    font-family: 'Trebuchet MS';
+}
+
+.checkout-btn:active {
+    opacity: 0.5;
+}
+
+.emptyCart
+{
+    margin-top: 20px;
+    background-image: url("src/assets/images/emptycart.png");
+    height: 70vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #141414;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+   
+
+  /* Tablet Landscape */
+@media screen and (max-width: 1024px) {
+    .cart_table {
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .book_cell {
+        margin-left: 20px;
+    }
+}
+
+/* Tablets and Smaller Desktops */
+@media screen and (max-width: 768px) {
+    .cart_table {
+        left: 5%;
+        width: 90%;
+    }
+
+    .book_cell {
+        margin-left: 10px;
+    }
+
+    .total-price {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        margin-left: 10px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+    .cart_table {
+        left: 2%;
+        width: 96%;
+    }
+
+    .book_cell {
+        margin-left: 5px;
+    }
+
+    .checkout {
+        text-align: center;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header_items {
+        display: block;
+        text-align: center;
+    }
+
+    .header_items h2 {
+        margin: 10px 0;
+    }
+
+    .footer-link {
+        margin: 10px 0;
+    }
+}

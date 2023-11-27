@@ -1,0 +1,260 @@
+.booklist
+{
+    width: 100%;
+    padding: 17px 0px;
+    background-image: linear-gradient(rgba(140, 185, 229, 0.582),rgba(99, 96, 96, 0.596));
+    display: flex;
+    min-height: 92.9vh;
+}
+
+.book-card {
+    height: 86vh;
+    width: 55%;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: row;
+    /* background-image: linear-gradient(rgba(238, 241, 244, 0.582),rgba(26, 25, 25, 0.596)); */
+    border-radius: 10px;
+  }
+
+.header {
+  /* background-color: red; */
+  width: 50%;
+  padding: 15px;
+}
+    
+.image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.book-info {
+    width: 50%;
+    padding: 20px 10px;
+    /* background-color: red; */
+    margin-right: 10px;
+  }
+
+  .title h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+
+  .author {
+    font-style: 'Trebuchet MS';
+    color: #595959;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .comments-card {
+    border-top: 1px solid black;
+    max-width: 800px;
+    height: 100%;
+    margin: 20px auto;
+    overflow: auto;
+    padding-bottom: 10px;
+    border-radius: 0;
+  }
+  
+  .review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin: 10px 0;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-family: 'Trebuchet MS';
+    font-size: 15px;
+    /* background-color: rgb(82, 77, 77); */
+    display: inline;
+    /* margin-right: 5px; */
+  }
+
+  .mdc-card__media
+  {
+      width: 350px;
+      border-radius: 20px;
+  }
+
+  .price_div
+  {
+    /* background-color: #d4c9c9; */
+    font-family: 'Trebuchet MS';
+    font-weight: 500;
+    font-size: 25px;
+    margin-left: 6px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .price
+  {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  .star {
+    margin-left: 65px;
+    font-family: 'Trebuchet MS';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+.additional_details
+{
+  margin-left: 5px;
+  font-family: 'Trebuchet MS';
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-bottom: -5px;
+}
+
+.info
+{
+  /* background-color: red; */
+  height: 40px;
+  margin-left: 6px;
+  font-family: 'Trebuchet MS';
+}
+
+.pageNumber-card {
+  margin-top: 10px;
+  border: .2px solid grey;
+}
+
+.pageNumber-card h2
+{
+  /* background-color: red; */
+  padding: 0px 10px;
+  font-family: 'Trebuchet MS';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.pageNumber-card-content
+{
+  /* background-color: #595959; */
+  padding: 5px;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: -17px;
+}
+
+.pages, .hours , .words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.pageNumber-card-content h5 {
+  font-family: 'Trebuchet MS';
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.pageNumber-card-content p {
+  font-family: 'Trebuchet MS';
+  font-size: 0.8rem;
+  margin-top: -10px;
+}
+
+.lord-icon {
+  width:23px;
+  height:23px;
+  vertical-align:-5px;
+}
+
+.cart_button {
+  height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #fff;
+  background-color: black;
+  color: white;
+  transition: background-color .4s;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: 'Trebuchet MS';
+  margin-left: 100px;
+}
+
+.cart_button:active {
+  opacity: 0.5;
+}
+
+.description_card
+{
+  /* background-color: red; */
+  width: 40%;
+  height:86vh;
+  border-radius: 10px;
+  display: flex;
+}
+
+.header1{
+  /* background-color: #595959; */
+  height: 55px;
+}
+
+.header1 h2 {
+  font-family: 'Trebuchet MS';
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.content1
+{
+  /* background-color: rgb(29, 94, 151); */
+  text-align:justify;
+  font-size: 15px;
+  font-family: 'Trebuchet MS';
+  padding: 0 20px;
+}
+
+.footer
+{
+  /* background-color: red; */
+  /* height: 250px; */
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.comments-card h2
+{
+  font-family: 'Trebuchet MS';
+  font-weight: 700;
+  font-size: 18px;
+  /* background-color: red; */
+  margin-bottom: -5px;
+}
+
+.customer_star
+{
+  /* background-color: red; */
+  display: inline-block;
+  vertical-align: top;
+}
+
+.review_content {
+  /* background-color: #595959; */
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.review_content p {
+  font-family: 'Trebuchet MS';
+  text-align: justify;
+} 

@@ -3,3 +3,10 @@ input{
     width: 40%;
     height: 35px;
 }
+
+.highlight
+{
+    border: 2px solid red;
+    color: red;
+    background-color: red;
+}

@@ -46,20 +46,20 @@
     font-size: 17px;
 }
 
-.filter-authors,.filter-genre,.filter-language,.filter-publishedYear,.filter-price
+/* .filter-authors,.filter-genre,.filter-language,.filter-publishedYear,.filter-price
 {
     height: 115px;
-}
+} */
 
 .author {
     margin-top: 10px;
     margin-left: 2px;
 }
 
-.genre,.language,.published-year,.by-price
+/* .genre,.language,.published-year,.by-price
 {
     margin-top: -5px;
-}
+} */
 
 .filter-fields {
     margin-top: -16px;

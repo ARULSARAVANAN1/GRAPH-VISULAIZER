@@ -22,7 +22,8 @@ const routes: Routes = [
         {path:"cart",component:CartComponent},
         {path:"cart/:id",component:CartComponent},
         {path:"navbar",component:NavbarComponent}
-      ],canActivate:[authguardGuard]
+      ]
+      ,canActivate:[authguardGuard]
     }
   ];
 

@@ -9,26 +9,43 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthserviceService } from './shared/service/authservice.service';
-import { BookserviceService } from './shared/service/bookservice.service';
-import { CartserviceService } from './shared/service/cartservice.service';
 import { InterceptorsInterceptor } from './shared/interceptors/interceptors.interceptor';
 import { PgNotFoundComponent } from './components/pg-not-found/pg-not-found.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterationComponent } from './components/registeration/registeration.component';
+import { DialogcompComponent } from './components/dialogcomp/dialogcomp.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularmaterialModule } from './modules/angularmaterial.module';
+import { UserComponent } from './components/user/user.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FileDialogComponent } from './components/file-dialog/file-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, PgNotFoundComponent],
+  declarations: [AppComponent,
+                 LoginComponent,
+                 RegisterationComponent,
+                 DialogcompComponent,
+                 PgNotFoundComponent,
+                 UserComponent,
+                 NavbarComponent,
+                 DashboardComponent,
+                 FileDialogComponent],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularmaterialModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
     AngularFireDatabaseModule,
+
   ],
   providers: [
     AuthserviceService,
-    BookserviceService,
-    CartserviceService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorsInterceptor,

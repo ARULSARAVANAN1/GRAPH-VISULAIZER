@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="navbar">
+    
+    <span class="brand"></span> 
+
+         
+    <div class="tags">
+        <button mat-button routerLink="/user" class="tag_buttons">Home</button>
+                
+        <button mat-button [matMenuTriggerFor]="dropdown">
+            <mat-icon>manage_accounts</mat-icon>{{user.firstName}}
+        </button>
+        
+        <mat-menu #dropdown="matMenu" class="menu-primary">
+            <button mat-menu-item class="menubutton"><i class="fa-solid fa-user"></i>&nbsp; Profile</button>
+            <button mat-menu-item (click)="logout()"  class="menubutton"><i class="fa-solid fa-right-from-bracket">&nbsp; </i> Logout</button>
+        </mat-menu>
+    </div>
+</mat-toolbar>

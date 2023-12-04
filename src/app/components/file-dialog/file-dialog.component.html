@@ -1,0 +1,8 @@
+<div class="upload-container">
+    <i class="fa-solid fa-download" (click)="downloadExcelFile()" title="Sample Template"></i>
+    <input type="file" (change)="onFileSelected($event)" accept=".xls,.xlsx,.csv"/>
+    <span><p class="star">*</p><p>.xls, .xlsx, .csv only allowed</p></span>
+    <button class="upload-btn" (click)="uploadFile()">Upload File</button>
+    <div [ngClass]="{'loader': loader}"></div>
+</div>
+

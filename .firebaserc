@@ -1,4 +1,8 @@
 {
+  "projects": {
+    "default": "login-register-1948f",
+    "Project-charts": "dashboard-charts-c037f"
+  },
   "targets": {
     "login-register-1948f": {
       "hosting": {
@@ -8,7 +12,5 @@
       }
     }
   },
-  "projects": {
-    "default": "login-register-1948f"
-  }
+  "etags": {}
 }

@@ -6,7 +6,5 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataserviceService {
   // searchText = new EventEmitter<string>();
-  searchText = new BehaviorSubject<string>('');
-  cartItems = new BehaviorSubject<number>(0);
-  searchDisable = new BehaviorSubject<boolean>(false);
+  fileUploaded = new BehaviorSubject<string>('');
 }

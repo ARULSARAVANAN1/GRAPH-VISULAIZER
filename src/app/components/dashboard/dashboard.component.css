@@ -1,0 +1,63 @@
+.graphs
+{   
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 820px;
+    height: 425px;
+}
+
+.button-div
+{
+    margin-top: 20px;
+    padding-right: 20px;
+    text-align: end;
+}
+
+.dropdown
+{
+    padding: 0 20px;
+}
+
+
+.file-table {
+    margin-top: 20px;
+    position: absolute;
+    top: 18%;
+    left: 78%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Button styles */
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin-right: 5px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  th,td{
+    text-align: center;
+  }

@@ -1,0 +1,41 @@
+<div class="button-div">
+    <button mat-raised-button color="primary" (click)="fileUpload()">UPLOAD FILE</button>
+</div>
+
+<div class="dropdown">
+    <h2 class="author">CHART TYPE</h2>
+    <mat-form-field appearance="outline" class="filter-fields" [disabled]="storedData.length == 0">
+      <mat-label>Select Chart Type</mat-label>
+      <mat-select [(ngModel)]="selectedType" (ngModelChange)="selectType()" >
+        <mat-option *ngFor="let type of chartTypes" [value]="type">{{type}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+<div class="graphs">
+  <svg id="Chart"></svg>
+</div>
+
+<div class="file-table" *ngIf="storedData">
+  <h2>Uploaded Files:</h2>
+  <table *ngFor="let data of fileDatas">
+    <thead>
+      <tr>
+        <th>File Name</th>
+        <th>Uploaded Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{data.fileName}}</td>
+        <td>{{data.uploadDate| date:'dd-MM-yyyy'}}</td>
+        <td>
+          <button (click)="delete()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
